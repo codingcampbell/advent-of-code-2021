@@ -9,17 +9,8 @@ input.forEach(n => fishCycles[n] += 1);
 
 const processFish = (cycles, days) => {
   for (let j = 0; j < days; j += 1) {
-    cycles = [
-      cycles[1],
-      cycles[2],
-      cycles[3],
-      cycles[4],
-      cycles[5],
-      cycles[6],
-      cycles[7] + cycles[0],
-      cycles[8],
-      cycles[0],
-    ];
+    cycles.push(cycles.shift());
+    cycles[6] += cycles[8];
   }
 
   return cycles.reduce((a, b) => a + b, 0);
