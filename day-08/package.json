@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "node day-08 < input.txt",
+    "test": "node day-08 < test-input.txt"
+  }
+}
